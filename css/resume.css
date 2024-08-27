@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "Roboto-regular";
+    src: url(/css/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-medium";
+    src: url(/css/fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-bold";
+    src: url(/css/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-black";
+    src: url(/css/fonts/Roboto-Black.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-link,
+.navbar-brand {
+    transition: 0.3s;
+    transform: scaleY(-20px);
+    opacity: 0;
+    animation: navmove 0.7s ease-in-out forwards;
+}
+
+@keyframes navmove {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.navhover {
+    transition: 0.3s;
+}
+
+.navhover:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.img-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-sec img {
+    max-width: 100%;
+    max-height: 70%;
+    cursor: zoom-in;
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
+}
+
+.circle-progress-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 12px 12px;
+}
+
+
+.circle-progress1,
+.circle-progress2,
+.circle-progress3,
+.circle-progress4 {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    background-color: #cca355;
+    border-radius: 50%;
+    background: conic-gradient(#cca355 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-progress1::before,
+.circle-progress2::before,
+.circle-progress3::before,
+.circle-progress4::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #212529;
+}
+
+.progress-value1,
+.progress-value2,
+.progress-value3,
+.progress-value4 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    color: #cca355;
+}
+
+.txt {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.vid-formats {
+    margin: 100px 0;
+}
+
+.vid-formats h4 {
+    color: #cca355;
+}
+
+.Format li {
+    font-size: 22px;
+}
+
+
+.btn-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.btn-sec a {
+    font-size: 30px;
+    padding: 10px 16px;
+    border-radius: 44px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.btn-sec a:hover {
+    background-color: #cca355;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    margin-right: 15px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.btn-sec a,
+.img-sec img,
+.project-txt h2 {
+    opacity: 0;
+}
+
+.btn-sec a.animate__animated,
+.img-sec img.animate__animated,
+.project-txt h2.animate__animated {
+    opacity: 1;
+}
+
+@media (max-width: 576px) {
+    .row> {
+        padding: 0;
+    }
+}
+
+.row>* {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@media (max-width:992px) {
+
+    .img-sec {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .project-txt {
+        margin: 50px 10px;
+    }
+}
